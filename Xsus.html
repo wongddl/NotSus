@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Merry X-Sus</title>
+</head>
+<body>
+    <div class="container">
+        <div id="mongtainer">
+            <div class="row">
+                <img class="mongus" src="sprite/red.png" alt="Image 1" id="1">
+            </div>
+            <div class="row">
+                <img class="mongus" src="sprite/green.png" alt="Image 2" id="2">
+                <img class="mongus" src="sprite/green.png" alt="Image 3" id="3">
+            </div>
+            <div class="row">
+                <img class="mongus" src="sprite/red.png" alt="Image 4" id="4">
+                <img class="mongus" src="sprite/red.png" alt="Image 5" id="5">
+                <img class="mongus" src="sprite/red.png" alt="Image 6" id="6">
+            </div>
+            <div class="row">
+                <img class="mongus" src="sprite/green.png" alt="Image 7" id="7">
+                <img class="mongus" src="sprite/green.png" alt="Image 8" id="8">
+                <img class="mongus" src="sprite/green.png" alt="Image 9" id="9">
+                <img class="mongus" src="sprite/green.png" alt="Image 10" id="10">
+            </div>
+            <div class="row">
+                <img class="mongus" src="sprite/white.png" alt="Image 11" id="11">
+            </div>
+            <div id="mybutton">
+
+                <button onclick="playSound()">Merry Christmas from Wong</button>
+                <audio id="myAudio" src="sprite/WWYAMC.mp3"></audio>
+            </div>
+
+        </div>
+        
+
+    </div>
+    <script>
+        function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        var reds = [1,4,5,6];
+        var greens = [2,3,7,8,9,10];
+        var white = [11]
+        var originalImageSources = []; // Array to store original image sources
+        async function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            let i = 0;
+            sussy_numbas = [2,3,4,5,10,11,12,13,18,19,20,21,24,25]
+            while (i !== 30) {
+            console.log(i);
+            if (i === 29){
+                timing = 3000
+            } else if (sussy_numbas.includes(i)){
+                timing = 433/2
+            } 
+            else{
+                timing = 433
+            }
+
+            let randomInteger = Math.floor(Math.random() * 11) + 1;
+            var mongus = document.getElementById(`${randomInteger}`);
+            if (greens.includes(randomInteger)){
+                mongus.src = "sprite/green twerk.gif";
+                await sleep(timing)
+
+
+            } else if (reds.includes(randomInteger)){
+                mongus.src = "sprite/red twerk.gif";
+                await sleep(timing)
+
+            } else if (white.includes(randomInteger)){
+                mongus.src = "sprite/white twerk.gif";
+                await sleep(timing)
+            }
+            replaceImage(randomInteger);
+            i += 1;
+
+        }
+        }
+
+
+
+        function replaceImage(randomInteger) {
+            var mongus = document.getElementById(`${randomInteger}`);
+            if (greens.includes(randomInteger)){
+                mongus.src = "sprite/green.png";
+
+            } else if (reds.includes(randomInteger)){
+                mongus.src = "sprite/red.png";
+
+            } else if (white.includes(randomInteger)){
+                mongus.src = "sprite/white.png";
+            }
+        }
+
+    </script>
+</body>
+</html>
