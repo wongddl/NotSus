@@ -43,11 +43,12 @@ button {
     overflow: hidden;
     cursor: pointer;
     background-color: rgb(138, 216, 138);
-    border-radius: 5px;
+    border-radius: 15px;
     border-color: rgba(95, 86, 86, 0.24);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
     transition: all 0.2s ease-in-out;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
 }
 button:hover {
 background-color: rgb(47, 180, 100);
