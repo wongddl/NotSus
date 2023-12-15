@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>(🔊 Volume on)</h1>
     <div class="container">
         <div id="mongtainer">
             <div class="row">
@@ -119,6 +120,7 @@
                 }
                 button.style.fontSize = `50px`;
                 button.style.borderRadius = `25px`;
+                button.style.padding = `50px`;
             }else{
                 for (const image of mongus){
                     image.style.width = `150px`;
@@ -126,6 +128,7 @@
                 }
                 button.style.fontSize = `20px`;
                 button.style.borderRadius = `15px`;
+                button.style.padding = `20px`;
             }
         }
         window.addEventListener("resize", resizeImages);
